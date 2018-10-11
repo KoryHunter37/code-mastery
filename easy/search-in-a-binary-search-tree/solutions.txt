@@ -1,5 +1,3 @@
-https://leetcode.com/problems/search-in-a-binary-search-tree/description/
-
 # Definition for a binary tree node.
 # class TreeNode:
 #     def __init__(self, x):
@@ -20,9 +18,10 @@ class Solution:
             if node.val == val:
                 return node
             else:
-                found = nextBST(node.left)
-                if found is None:
+                if val > node.val:
                     found = nextBST(node.right)
+                elif val < node.val:
+                    found = nextBST(node.left)
                 return found
             return None
         
