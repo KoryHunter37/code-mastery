@@ -9,3 +9,6 @@ Remember to think about 'None' or 0 inputs.
 
 https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/submissions/
 Do not overcomplicate algorithm with too many moving / dangerous / unstable structures. Clean, simple, readable!
+
+https://leetcode.com/problems/k-diff-pairs-in-an-array/submissions/
+Use collections module for unusual starting points. It can do the tricky work for you!
