@@ -6,3 +6,6 @@ Change the given input into something easier to work with.
 
 https://leetcode.com/problems/same-tree/submissions/
 Remember to think about 'None' or 0 inputs.
+
+https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/submissions/
+Do not overcomplicate algorithm with too many moving / dangerous / unstable structures. Clean, simple, readable!
