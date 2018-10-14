@@ -2,7 +2,7 @@
 
 from fractions import gcd
 
-class Solution(object):
+class Solution():
     def canMeasureWater(self, x, y, z):
         """
         :type x: int
