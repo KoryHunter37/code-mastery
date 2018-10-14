@@ -3,3 +3,6 @@ Leave a trail of breadcrumbs to know where you've been!
 
 https://leetcode.com/problems/island-perimeter/
 Change the given input into something easier to work with.
+
+https://leetcode.com/problems/same-tree/submissions/
+Remember to think about 'None' or 0 inputs.
