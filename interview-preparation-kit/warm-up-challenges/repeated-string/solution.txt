@@ -1,0 +1,41 @@
+# https://www.hackerrank.com/challenges/repeated-string/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+import copy
+import collections
+
+# Complete the repeatedString function below.
+def repeatedString(s, n):
+    s = list(s)
+                    
+    if len(s) > n:
+        cut_string = s[:n]
+        count = collections.Counter(cut_string)
+        return count["a"]
+    else:
+        factor = math.floor(n / len(s))
+        remainder = n % len(s)
+        count1 = collections.Counter(s)
+        cut_string = s[:remainder]
+        count2 = collections.Counter(cut_string)
+        
+        return count1["a"] * factor + count2["a"]
+    
+if __name__ == '__main__':
+    fptr = open(os.environ['OUTPUT_PATH'], 'w')
+
+    s = input()
+
+    n = int(input())
+
+    result = repeatedString(s, n)
+
+    fptr.write(str(result) + '\n')
+
+    fptr.close()
