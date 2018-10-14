@@ -1,0 +1,5 @@
+https://leetcode.com/problems/linked-list-cycle/description/
+Leave a trail of breadcrumbs to know where you've been!
+
+https://leetcode.com/problems/island-perimeter/
+Change the given input into something easier to work with.
