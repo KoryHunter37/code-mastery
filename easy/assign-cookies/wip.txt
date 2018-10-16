@@ -1,0 +1,30 @@
+# https://leetcode.com/problems/assign-cookies/description/
+
+class Solution:
+    def findContentChildren(self, g, s):
+        """
+        :type g: List[int]
+        :type s: List[int]
+        :rtype: int
+        """
+        
+        s = collections.Counter(s)
+        g = sorted(g, reverse=True)
+        
+        fed = 0
+        
+        s_keys = list(s.keys())
+        
+        for child in g:
+            if s[child] > 0:
+                s[child] -= 1
+                fed += 1
+                continue
+            
+            satisfactory_cookies = [i for i in s_keys if i >= child and s[i] > 0]
+            if len(satisfactory_cookies) > 0:
+                s[satisfactory_cookies[0]] -= 1
+                fed += 1
+                continue                                          
+        
+        return fed
