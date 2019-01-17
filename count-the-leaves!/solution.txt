@@ -5,14 +5,10 @@ class BinaryTree:
     def number_of_leaves(self, root):
         if root is None:
             return 0
-        
+            
         if root.left_child is None and root.right_child is None:
             return 1
-        elif root.left_child is None and root.right_child is not None:
-            return self.number_of_leaves(root.right_child)
-        elif root.left_child is not None and root.right_child is None:
-            return self.number_of_leaves(root.left_child)
-        else:
-            return self.number_of_leaves(root.left_child) + self.number_of_leaves(root.right_child)
-
-
+            
+        left_leaves = self.number_of_leaves(root.left_child) if root.left_child is not None else 0
+        right_leaves = self.number_of_leaves(root.right_child) if root.right_child is not None else 0
+        return left_leaves + right_leaves
