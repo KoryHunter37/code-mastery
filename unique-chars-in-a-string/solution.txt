@@ -1,7 +1,6 @@
 def unique_chars_in_string(input_string):
-    input_string = list(input_string)
-    unique_string = list(set(input_string))
+    unique_string = set(input_string)
     
-    return len(input_string) == len(unique_string
+    return len(input_string) == len(unique_string)
 
 
