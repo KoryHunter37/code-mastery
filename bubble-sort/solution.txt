@@ -1,0 +1,16 @@
+def bubble_sort(a_list):
+    if a_list is None or len(a_list) == 0:
+        return a_list
+        
+    while True:
+        sort = True
+        
+        for i in range(0, len(a_list) - 1):
+            if a_list[i + 1] < a_list[i]:
+                a_list[i], a_list[i+1] = a_list[i+1], a_list[i]
+                sort = False
+        
+        if sort:
+            break
+        
+    return a_list
