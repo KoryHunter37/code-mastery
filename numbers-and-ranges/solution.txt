@@ -1,0 +1,19 @@
+def find_range(input_list,input_number):
+    
+    first = None
+    last = None
+    
+    for i in range(len(input_list)):
+        if first is None:
+            if input_list[i] == input_number:
+                first = i
+        else:
+            if input_list[i] == input_number:
+                last = i
+    
+    if last is None:
+        last = first
+    
+    return Range(first, last)
+
+
