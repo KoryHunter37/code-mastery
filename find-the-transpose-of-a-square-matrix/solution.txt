@@ -1,0 +1,17 @@
+def transpose_matrix(matrix):
+    rows = len(matrix)
+    cols = len(matrix[0])
+
+    output = [[None for a in range(rows)] for b in range(cols)]
+
+    for r in range(rows):
+        for c in range(cols):
+            output[r][c] = matrix[c][r]
+
+    # I shouldn't have to do this, but an unknown issue with firecode.io makes me copy the array this way instead of with "="
+    for r in range(rows):
+        for c in range(cols):
+            matrix[r][c] = output[r][c]
+            
+
+
