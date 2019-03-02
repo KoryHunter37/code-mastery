@@ -2,9 +2,6 @@
 
 def getCount(inputStr):
     num_vowels = 0
-    
-    for letter in inputStr:
-        if letter in ["a", "e", "i", "o", "u"]:
-            num_vowels += 1
+    return sum([1 for letter in inputStr.lower() if letter in "aeiou"])
     
     return num_vowels
