@@ -1,0 +1,12 @@
+# https://www.codewars.com/kata/which-are-in/train/python
+
+def in_array(array1, array2):
+    substrings = []
+    
+    for word in array1:
+        for other_word in array2:
+            if word in other_word:
+                substrings.append(word)
+                break
+                
+    return sorted(set(substrings))
