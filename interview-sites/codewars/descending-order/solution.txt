@@ -1,0 +1,6 @@
+# https://www.codewars.com/kata/descending-order/train/python
+
+def Descending_Order(num):
+    nums = list(str(num))
+    nums = sorted(nums, reverse=True)
+    return int("".join(nums))
