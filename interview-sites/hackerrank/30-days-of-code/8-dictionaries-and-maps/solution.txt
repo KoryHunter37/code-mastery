@@ -1,0 +1,30 @@
+# https://www.hackerrank.com/challenges/30-dictionaries-and-maps/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+if __name__ == '__main__':
+    n = int(input())
+    entries = []
+
+    for i in range(n):
+        entries.append(tuple(input().split()))
+
+    phone_book = dict(entries)
+
+    while True:
+        query = input()
+        if input is None:
+            break
+        else:
+            name = str(query)
+            try:
+                print("{name}={number}".format(name=name, number=phone_book[name]))
+            except:
+                print("Not found")
