@@ -1,0 +1,4 @@
+# https://www.codewars.com/kata/friend-or-foe/train/python
+
+def friend(x):
+    return [name for name in x if len(name) == 4]
