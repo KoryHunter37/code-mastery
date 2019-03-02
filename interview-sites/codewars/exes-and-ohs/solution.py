@@ -5,4 +5,4 @@ from collections import Counter
 def xo(s):
     count = Counter(s.lower())
     
-    return count['x'] == count['o']
+    return count.get('x') == count.get('o')
