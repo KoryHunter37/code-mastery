@@ -1,0 +1,5 @@
+# https://www.codewars.com/kata/create-phone-number/train/python
+
+def create_phone_number(n):
+    n = list(map(str, n))
+    return f"({''.join(n[0:3])}) {''.join(n[3:6])}-{''.join(n[6:])}"
