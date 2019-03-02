@@ -1,6 +1,4 @@
 # https://app.codesignal.com/arcade/intro/level-2/xzKiBHjhoinnpdh6m
 
-import numpy as np
-
 def adjacentElementsProduct(inputArray):
-    return max([np.prod(inputArray[i:i+2]) for i in range(len(inputArray) -1)])
+    return max([inputArray[i] * inputArray[i+1] for i in range(len(inputArray) -1)])
