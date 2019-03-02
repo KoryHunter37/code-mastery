@@ -3,6 +3,6 @@
 from collections import Counter
 
 def xo(s):
-    count = Counter(s)
+    count = Counter(s.lower())
     
-    return count['x'] + count['X'] == count['o'] + count['O']
+    return count['x'] == count['o']
