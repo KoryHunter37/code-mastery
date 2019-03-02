@@ -1,0 +1,15 @@
+# https://www.codewars.com/kata/520446778469526ec0000001/train/python
+
+def same_structure_as(original,other):
+    
+    try:
+        if any( [isinstance(i, str) for i in original + other] ):
+            return True
+    except:
+        return False
+
+
+    original = [symbol for symbol in str(original) if symbol in "[],"]
+    other = [symbol for symbol in str(other) if symbol in "[],"]
+    
+    return original == other
