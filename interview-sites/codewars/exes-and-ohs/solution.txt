@@ -1,0 +1,8 @@
+# https://www.codewars.com/kata/exes-and-ohs/train/python
+
+from collections import Counter
+
+def xo(s):
+    count = Counter(s)
+    
+    return count['x'] + count['X'] == count['o'] + count['O']
