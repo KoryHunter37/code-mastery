@@ -1,0 +1,14 @@
+# https://www.codewars.com/kata/where-my-anagrams-at/train/python
+
+from collections import Counter
+
+def anagrams(word, words):
+    original_counter = Counter(word)
+    anagrams = []
+    
+    for w in words:
+        other_counter = Counter(w)
+        if original_counter == other_counter:
+            anagrams.append(w)
+            
+    return anagrams
