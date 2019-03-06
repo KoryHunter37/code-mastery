@@ -1,0 +1,28 @@
+# https://www.hackerrank.com/challenges/30-2d-arrays/problem
+
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+
+
+if __name__ == '__main__':
+    arr = []
+
+    for _ in range(6):
+        arr.append(list(map(int, input().rstrip().split())))
+
+    height = len(arr)
+    width = len(arr[0])
+
+    max_sum = float("-inf")
+    for h in range(height - 2):
+        for w in range(width - 2):
+            hourglass = sum( arr[h][w:w+3] + [arr[h+1][w+1]] + arr[h+2][w:w+3])
+            max_sum = max(max_sum, hourglass)
+
+    print(max_sum)
