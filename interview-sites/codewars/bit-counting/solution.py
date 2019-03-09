@@ -1,5 +1,5 @@
 # https://www.codewars.com/kata/bit-counting/train/python
 
 def countBits(n):
-    return str(bin(n)).replace("b", "").count("1")
+    return str(bin(n)).count("1")
     
