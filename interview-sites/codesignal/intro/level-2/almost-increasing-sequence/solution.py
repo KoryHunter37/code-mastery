@@ -9,18 +9,19 @@ def almostIncreasingSequence(sequence):
     problematic_indices = []
     n_max = float('-inf')
     
+    def check_increasing_sequence_without_index(i):
+        if sequence[:i] + sequence[i+1:] == sorted(set(sequence[:i] + sequence[i+1:])):
+            return True
+    
     for i in range(len(sequence) - 1):   
         n1 = sequence[i]
         n2 = sequence[i+1]
         
         if n2 <= max(n1, n_max):
-                problematic_indices.append(i)
-                problematic_indices.append(i+1)
+                if check_increasing_sequence_without_index(i): return True
+                if check_increasing_sequence_without_index(i+1): return True
         else:
             n_max = max(n1, n_max)
                 
-    for i in problematic_indices:
-        if sequence[:i] + sequence[i+1:] == sorted(set(sequence[:i] + sequence[i+1:])):
-            return True
-                
     return False
+                
