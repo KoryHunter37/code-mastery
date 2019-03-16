@@ -1,0 +1,15 @@
+# https://app.codesignal.com/arcade/intro/level-2/xskq4ZxLyqQMCLshr
+
+def matrixElementsSum(matrix):
+    
+    cost = 0
+    for h in range(len(matrix)):
+        for w in range(len(matrix[0])):
+            if h == 0:
+                cost += matrix[h][w]
+
+            elif 0 not in [matrix[i][w] for i in range(0, h)]:
+                cost += matrix[h][w]
+                
+    return cost
+        
