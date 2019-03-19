@@ -9,20 +9,20 @@ def minesweeper(matrix):
                 result.append([])
 
                 for w in range(width):
-                        above_left  = matrix[h-1][w-1] if h-1 >= 0 and w-1 >= 0        else None
-                        above       = matrix[h-1][w  ] if h-1 >= 0                     else None
-                        above_right = matrix[h-1][w+1] if h-1 >= 0 and w+1 < width     else None
-
-                        same_left   = matrix[h  ][w-1] if w-1 >= 0                     else None
-                        same_right  = matrix[h  ][w+1] if w+1 < width                  else None
-
-                        below_left  = matrix[h+1][w-1] if h+1 < height and w-1 >= 0    else None
-                        below       = matrix[h+1][w  ] if h+1 < height                 else None
-                        below_right = matrix[h+1][w+1] if h+1 < height and w+1 < width else None
-
-                        adjacents = [above_left, above, above_right, same_left, same_right, below_left, below, below_right]
-
-                        result[-1].append(len([i for i in adjacents if i]))
-
+                        # Add a new number indicating the number of mines for this h, w coordinate
+                        result[-1].append(0)
+                        
+                        # These are the combinations of adjacent index values we want to check
+                        xi = [-1, 0, 1]
+                        yi = [-1, 0, 1]
+                        
+                        for x in xi:
+                                for y in yi:
+                                        # Check the ensure validity of space in matrix
+                                        if 0 <= h + y < height and 0 <= w + x < width:
+                                                # Check to ensure this is a mine in an adjacent field
+                                                if not (x == y == 0) and matrix[h+y][w+x]:
+                                                        result[-1][-1] += 1
+                                                
         return result
       
