@@ -1,0 +1,14 @@
+# https://app.codesignal.com/arcade/intro/level-6/PWLT8GBrv9xXy4Dui
+
+from string import ascii_lowercase
+
+def alphabeticShift(inputString):
+    alphabet_twice = ascii_lowercase * 2
+    
+    result = []
+    
+    for i, letter in enumerate(inputString):
+        letter_index = alphabet_twice.find(letter) + 1
+        result.append(alphabet_twice[letter_index])
+        
+    return ''.join(result)
