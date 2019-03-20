@@ -7,12 +7,12 @@ Given two cells on the standard chess board, determine whether they have the sam
 For `cell1 = "A1"` and `cell2 = "C3"`, the output should be
 `chessBoardCellColor(cell1, cell2) = true`.
 
-[Example 1](images/example_1.png)
+![Example 1](images/example_1.png)
 
 For `cell1 = "A1"` and `cell2 = "H3"`, the output should be
 `chessBoardCellColor(cell1, cell2) = false`.
 
-[Example 2](images/example_2.png)
+![Example 2](images/example_2.png)
 
 ## Input/Output
 
