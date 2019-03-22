@@ -1,0 +1,15 @@
+# https://app.codesignal.com/arcade/intro/level-10/8RiRRM3yvbuAd3MNg
+
+from typing import List
+
+def electionsWinners(votes: List, k: int) -> int:
+    leader = max(votes)
+    
+    # If there are no votes remaining, and there is a tie for the lead, no one can win.
+    # If one person is in the lead, they win.
+    if k == 0:
+        return 0 if votes.count(leader) > 1 else 1
+    
+    # Potential candidates are candidates who might have more votes than the current leader.
+    potential_candidates = [candidate for candidate in votes if candidate + k > leader]
+    return len(potential_candidates)
