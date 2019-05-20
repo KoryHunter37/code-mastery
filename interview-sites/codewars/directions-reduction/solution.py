@@ -12,6 +12,7 @@ def dirReduc(arr):
             curr = new_arr[i]
             next = new_arr[i+1]
             
+            if curr == "SKIP":
                 continue
                 
             if opposites.get(curr) == next:
