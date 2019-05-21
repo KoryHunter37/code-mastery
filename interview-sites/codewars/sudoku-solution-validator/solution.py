@@ -14,6 +14,7 @@ def validSolution(board):
                     else:
                         record.append(board[y][x])
                         
+    # Each Row
     for h in range(0, 9):
         if len(set(board[h])) != 9:
             return False
