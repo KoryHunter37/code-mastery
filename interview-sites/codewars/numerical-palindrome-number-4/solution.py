@@ -5,7 +5,7 @@ def is_palindrome(num):
         return False
         
     s = str(num)
-    return s[0:len(s)//2] == s[len(s)-1:len(s)-len(s)//2-1:-1]
+    return s == s[::-1]
 
 def palindrome(num):
     if type(num) is not int or num < 0:
