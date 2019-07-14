@@ -9,9 +9,7 @@ def palindrome(num):
     
     s = str(num)
     
-    for length in range(2, len(s)+1):
-        for i in range(0, len(s)+1 - length):
-            if is_palindrome(s[i:i+length]):
-                return True
-                
+    for i in range(0, len(s) - 1):
+        if is_palindrome(s[i:i+2]) or is_palindrome(s[i:i+3]):
+            return True               
     return False
