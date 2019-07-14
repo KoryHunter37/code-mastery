@@ -3,6 +3,4 @@
 def palindrome(num):
     if type(num) is not int or num < 0:
         return 'Not valid'
-
-    s = str(num)
-    return s[:len(s)//2] == s[:len(s)-len(s)//2-1:-1]
+    return str(num) == str(num)[::-1]
