@@ -2,21 +2,8 @@
 
 package kata
 
-import (
-"fmt"
-"strings"
-)
+import "strings"
 
 func DNAtoRNA(dna string) string {
-  s := strings.Split(dna, "")
-  
-  fmt.Printf("%v", s)
-  
-  for i := range s{
-    if s[i] == "T"{
-      s[i] = "U"
-    }
-  }
-  
-  return strings.Join(s, "")
+  return strings.Replace(dna, "T", "U", -1)
 }
