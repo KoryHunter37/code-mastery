@@ -2,12 +2,9 @@
 
 package kata
 
-func Maps(x []int) []int {
-
-  y := make([]int, len(x))
-
-  for i := 0; i < len(x); i++{
-    y[i] = x[i] * 2
+func Maps(x []int) (y []int) {
+  for _, j := range x{
+    y = append(y, j*2)
   }
   return y
 }
