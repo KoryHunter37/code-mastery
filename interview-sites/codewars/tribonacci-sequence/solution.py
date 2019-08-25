@@ -10,7 +10,7 @@ def tribonacci(signature, n):
             return record[n]
         else:
             print(n)
-            record[n] = tribonacci_recursive(n - 1) + tribonacci_recursive(n - 2) + tribonacci_recursive(n - 3)
+            record[n] = tribonacci_recursive(n - 1) + record[n-2] + record[n-3]
             return record[n]
     
     tribonacci_recursive(n)
